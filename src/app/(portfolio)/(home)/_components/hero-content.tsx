@@ -85,12 +85,12 @@ export function HeroContent() {
       <div className="flex w-full gap-3">
         <Button
           variant={"default"}
-          className="flex items-center gap-2 rounded-4xl px-5 py-4 text-xs font-semibold text-background"
+          className="flex items-center gap-2 rounded-2xl px-9 py-5 text-xs font-semibold text-background"
         >
           <Mail className="h-2 w-2.5" />
           Hire Me
         </Button>
-        <Button className="flex items-center gap-2 rounded-2xl border border-border bg-background px-5 py-3.5 text-xs font-semibold text-stone-600">
+        <Button className="flex items-center gap-2 rounded-2xl border border-border bg-background px-4 py-5 text-xs font-semibold text-stone-600">
           <Download className="h-3 w-3" />
           Download CV
         </Button>

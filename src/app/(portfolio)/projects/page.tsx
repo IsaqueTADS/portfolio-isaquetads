@@ -1,7 +1,13 @@
+import { ProjectsHero } from "./_components/projects-hero"
+import { ProjectsGrid } from "./_components/projects-grid"
+
 export default function Page() {
   return (
-    <div>
-      <h1>Project</h1>
+    <div className="flex px-4">
+      <div className="flex w-full flex-col gap-16">
+        <ProjectsHero />
+        <ProjectsGrid />
+      </div>
     </div>
   )
 }
