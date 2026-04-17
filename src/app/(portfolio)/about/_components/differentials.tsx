@@ -26,7 +26,7 @@ export function Differentials() {
         <div className="h-px flex-1 bg-border/50" />
       </div>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {differentials.map((item, index) => (
           <div
             key={index}

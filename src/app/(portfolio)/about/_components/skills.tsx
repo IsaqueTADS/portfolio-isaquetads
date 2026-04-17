@@ -12,7 +12,7 @@ export function Skills() {
         Skills & Tecnologias
       </h2>
 
-      <div className="grid grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">
         {Object.entries(skills).map(([category, items]) => (
           <div
             key={category}

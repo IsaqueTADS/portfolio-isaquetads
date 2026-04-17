@@ -4,15 +4,15 @@ import { Badge } from "../../_components/bagde"
 
 export function HeroAbout() {
   return (
-    <section className="flex gap-12">
-      <div className="flex w-[60%] flex-col gap-6">
+    <section className="flex flex-col sm:gap-12 sm:flex-row">
+      <div className="flex flex-col gap-2 sm:w-[60%] sm:gap-6">
         <Badge>Desenvolvedor Full Stack</Badge>
-        <h1 className="font-heading text-7xl leading-none font-extrabold tracking-tight text-foreground">
+        <h1 className="mt-5 text-4xl leading-none font-extrabold tracking-tight text-foreground sm:mt-0 sm:font-heading sm:text-7xl">
           Sobre Mim
         </h1>
 
         <div className="flex items-center gap-6">
-          <h2 className="font-heading text-5xl font-extrabold text-foreground">
+          <h2 className="font-heading text-3xl font-extrabold text-foreground sm:text-5xl">
             Isaque Rodrigues
           </h2>
           <div className="h-12 w-px bg-border" />
@@ -53,7 +53,7 @@ export function HeroAbout() {
         </div>
       </div>
 
-      <div className="flex w-[40%] items-start justify-center">
+      <div className="flex items-start justify-center sm:w-[40%]">
         <div className="relative h-200 w-200 overflow-hidden rounded-full">
           <Image
             src="/foto-isaque-about.png"
