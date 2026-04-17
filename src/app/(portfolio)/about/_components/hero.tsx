@@ -7,7 +7,7 @@ export function HeroAbout() {
   return (
     <section className="flex gap-12">
       <div className="flex w-[60%] flex-col gap-6">
-        <div className="flex items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-sm">
+        <div className="flex items-center w-[40%] gap-2 rounded-full bg-secondary px-4 py-1.5 text-sm">
           <span className="h-1.5 w-1.5 rounded-full bg-foreground" />
           <span className="text-xs font-medium text-foreground">
             Desenvolvedor Full Stack
@@ -61,12 +61,12 @@ export function HeroAbout() {
       </div>
 
       <div className="flex w-[40%] items-start justify-center">
-        <div className="relative h-100 w-100 overflow-hidden rounded-full">
+        <div className="relative h-200 w-200 overflow-hidden rounded-full">
           <Image
-            src="/foto-perfil-isaquetads.jpg"
+            src="/foto-isaque-about.png"
             alt="Isaque Rodrigues"
             fill
-            className="object-cover"
+            className="object-cover "
             priority
           />
         </div>

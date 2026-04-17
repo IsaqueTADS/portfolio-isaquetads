@@ -25,25 +25,25 @@ export function Differentials() {
         <h2 className="font-heading text-2xl font-bold text-foreground">
           O que me diferencia
         </h2>
-        <div className="flex-1 h-px bg-border/50" />
+        <div className="h-px flex-1 bg-border/50" />
       </div>
 
       <div className="grid grid-cols-3 gap-4">
         {differentials.map((item, index) => (
           <div
             key={index}
-            className="group relative flex flex-col gap-4 rounded-2xl border border-border/40 bg-secondary/70 p-6 transition-all duration-200 hover:bg-secondary hover:border-border overflow-hidden"
+            className="group relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-border/40 bg-secondary/70 p-6 transition-all duration-200 hover:border-border hover:bg-secondary"
           >
-            <span className="absolute right-5 top-4 font-mono text-[64px] font-bold ttext-foreground/3 leading-none select-none">
+            <span className="absolute top-4 right-5 font-mono text-[64px] leading-none font-bold text-foreground/3 select-none">
               0{index + 1}
             </span>
 
-            <span className="text-2xl relative">{item.icon}</span>
-            <div className="flex flex-col gap-1.5 relative">
+            <span className="relative text-2xl">{item.icon}</span>
+            <div className="relative flex flex-col gap-1.5">
               <h3 className="text-sm font-semibold text-foreground">
                 {item.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-sm leading-relaxed text-muted-foreground">
                 {item.description}
               </p>
             </div>
