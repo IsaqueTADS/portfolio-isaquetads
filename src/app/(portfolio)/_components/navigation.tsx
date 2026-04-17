@@ -1,5 +1,6 @@
 "use client"
 
+import { Button } from "@/components/ui/button"
 import { Briefcase, Code, Home, Mail, User } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -20,15 +21,21 @@ export function Navigation() {
       {navItems.map((item) => {
         const isActive = pathname === item.href
         return (
-          <Link
+          <Button
             key={item.href}
-            href={item.href}
-            className="flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium transition-colors hover:text-foreground data-[active]:bg-foreground data-[active]:px-6 data-[active]:text-background"
-            data-active={isActive ? "true" : undefined}
+            variant={isActive ? "default" : "ghost"}
+            className={"rounded-3xl py-4"}
           >
-            <item.icon size={item.size} />
-            <span>{item.label}</span>
-          </Link>
+            <Link
+              key={item.href}
+              href={item.href}
+              className="flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium"
+              data-active={isActive ? "true" : undefined}
+            >
+              <item.icon size={item.size} />
+              <span>{item.label}</span>
+            </Link>
+          </Button>
         )
       })}
     </nav>
