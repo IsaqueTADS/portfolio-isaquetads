@@ -6,13 +6,15 @@ export default function PortfolioLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  return <div className="flex flex-col mx-auto max-w-6xl min-h-screen">
-    <Header />
+  return (
+    <div className="mx-auto flex min-h-screen max-w-6xl flex-col">
+      <Header />
 
-    <main className="flex-1 border-b">
-      {children}
-    </main>
+      <main className="mt-10 flex-1 border-b sm:mt-30">
+        {children}
+      </main>
 
-    <Footer />
-  </div>
+      <Footer />
+    </div>
+  )
 }
