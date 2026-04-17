@@ -7,12 +7,12 @@ export function HeroAbout() {
     <section className="flex gap-12">
       <div className="flex w-[60%] flex-col gap-6">
         <Badge>Desenvolvedor Full Stack</Badge>
-        <h1 className="font-heading text-[72px] leading-none font-extrabold tracking-[-1.8px] text-foreground">
+        <h1 className="font-heading text-7xl leading-none font-extrabold tracking-tight text-foreground">
           Sobre Mim
         </h1>
 
         <div className="flex items-center gap-6">
-          <h2 className="font-heading text-[48px] font-extrabold text-foreground">
+          <h2 className="font-heading text-5xl font-extrabold text-foreground">
             Isaque Rodrigues
           </h2>
           <div className="h-12 w-px bg-border" />

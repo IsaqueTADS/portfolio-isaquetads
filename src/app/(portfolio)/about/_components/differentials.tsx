@@ -32,7 +32,7 @@ export function Differentials() {
             key={index}
             className="group relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-border/40 bg-secondary/70 p-6 transition-all duration-200 hover:border-border hover:bg-secondary"
           >
-            <span className="absolute top-4 right-5 font-mono text-[64px] leading-none font-bold text-foreground/3 select-none">
+            <span className="absolute top-4 right-5 font-mono text-7xl leading-none font-bold text-foreground/3 select-none">
               0{index + 1}
             </span>
 

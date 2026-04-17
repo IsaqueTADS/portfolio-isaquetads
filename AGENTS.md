@@ -20,6 +20,7 @@ npm run typecheck # TypeScript
 ## Regras importantes
 
 - **Tailwind v4**: sem `tailwind.config.js` - configuração via CSS (`src/app/globals.css`)
+- **Tailwind classes**: sempre usar classes canônicas (ex: `h-3` ao invés de `h-[12px]`, `w-5` ao invés de `w-[20px]`)
 - **Cores do tema**: usar tokens do tema (`text-background`, `bg-foreground`, etc.) - nunca hard-coded
 - **Button**: sempre usar componente shadcn `@/components/ui/button`, nunca `<button>` nativo
 - **Imagens**: sempre usar `<Image>` do Next.js
