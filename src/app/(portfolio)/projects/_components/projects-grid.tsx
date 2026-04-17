@@ -8,31 +8,44 @@ export interface ProjectGroup {
 
 export const projectsGrouped: ProjectGroup[] = [
   {
-    id: "ecommerce",
-    title: "E-commerce Completo",
+    id: "gympass",
+    title: "GymPass - Check-ins em Academias",
     projects: [
       {
-        id: "1",
-        title: "E-commerce API",
+        id: "gympass-api",
+        title: "GymPass API",
         description:
-          "API RESTful completa para sistema de e-commerce com autenticação JWT, gestão de produtos e pedidos.",
-        technologies: ["Node.js", "Express", "PostgreSQL", "Prisma"],
-        githubUrl: "https://github.com/IsaqueTADS/ecommerce-api",
+          "API RESTful para sistema de check-ins em academias com geolocalização. Permite aos usuários realizar check-ins em academias próximas, com suporte a busca por localização, validação de check-ins por administradores e métricas pessoais de uso.",
+        technologies: [
+          "Node.js",
+          "TypeScript",
+          "Fastify",
+          "Prisma",
+          "PostgreSQL",
+        ],
+        githubUrl: "https://github.com/IsaqueTADS/GymPass-API",
+      },
+    ],
+  },
+  {
+    id: "focuz-event",
+    title: "Focuz - Gerenciamento de Eventos",
+    projects: [
+      {
+        id: "focuz-api",
+        title: "Focuz API",
+        description:
+          "API RESTful para gerenciamento de eventos com pagamentos Stripe, geolocalização, categorização e sistema de destaque.",
+        technologies: ["Express", "TypeScript", "Stripe"],
+        githubUrl: "https://github.com/IsaqueTADS/FocuzAPI",
       },
       {
-        id: "1f",
-        title: "E-commerce Web",
+        id: "focuz-frontend",
+        title: "Focuz Frontend",
         description:
-          "Frontend web do sistema e-commerce com React e integração API REST.",
-        technologies: ["React", "TypeScript", "Tailwind"],
-        githubUrl: "https://github.com/IsaqueTADS/ecommerce-web",
-      },
-      {
-        id: "1m",
-        title: "E-commerce Mobile",
-        description: "Aplicativo mobile para iOS e Android com React Native.",
-        technologies: ["React Native", "TypeScript", "Expo"],
-        githubUrl: "https://github.com/IsaqueTADS/ecommerce-mobile",
+          "Aplicativo web para descoberta de eventos, painéis de gerenciamento e interfaces de promoção integradas à API.",
+        technologies: ["React", "TypeScript"],
+        githubUrl: "https://github.com/IsaqueTADS/Focuz-FrontEnd",
       },
     ],
   },
@@ -40,52 +53,19 @@ export const projectsGrouped: ProjectGroup[] = [
 
 export const projectsStandalone: Project[] = [
   {
-    id: "2",
-    title: "Task Manager",
+    id: "fintech",
+    title: "Fintech Dashboard",
     description:
-      "Aplicação fullstack para gestão de tarefas com drag-and-drop, assignees e deadlines.",
-    technologies: ["React", "TypeScript", "Tailwind", "Drizzle ORM"],
-    githubUrl: "https://github.com/IsaqueTADS/task-manager",
-  },
-  {
-    id: "3",
-    title: "Portfolio V1",
-    description:
-      "Primeira versão do meu portfólio pessoal construído com Next.js e animações.",
-    technologies: ["Next.js", "React", "Framer Motion"],
-    githubUrl: "https://github.com/IsaqueTADS/portfolio-v1",
-    demoUrl: "https://portfolio-v1.vercel.app",
-  },
-  {
-    id: "4",
-    title: "Weather App",
-    description:
-      "Aplicação de clima em tempo real consumindo API externa com geolocalização.",
-    technologies: ["React", "OpenWeather API", "CSS Modules"],
-    githubUrl: "https://github.com/IsaqueTADS/weather-app",
-    demoUrl: "https://weather-app-demo.vercel.app",
-  },
-  {
-    id: "5",
-    title: "Chat Real-time",
-    description:
-      "Sistema de chat em tempo real com WebSockets e salas privadas.",
-    technologies: ["Node.js", "Socket.io", "Redis", "MongoDB"],
-    githubUrl: "https://github.com/IsaqueTADS/chat-realtime",
-  },
-  {
-    id: "6",
-    title: "Blog CMS",
-    description:
-      "Sistema de gerenciamento de conteúdo para blog com editor markdown e API GraphQL.",
-    technologies: ["Next.js", "GraphQL", "PostgreSQL", "Prisma"],
-    githubUrl: "https://github.com/IsaqueTADS/blog-cms",
+      "Dashboard de vendas com gráficos interativos, métricas em tempo real e integração com API. Implementado com React, TypeScript e Vite.",
+    technologies: ["React", "TypeScript", "Vite", "Recharts"],
+    githubUrl: "https://github.com/IsaqueTADS/fintech",
+    demoUrl: "https://fintech-orcin-sigma.vercel.app",
   },
 ]
 
 export function ProjectsGrid() {
   return (
-    <section className="flex flex-col gap-12">
+    <section className="flex flex-col gap-12 sm:mb-20">
       {projectsGrouped.map((group) => (
         <div key={group.id} className="flex flex-col gap-6">
           <div className="flex items-center gap-4">
