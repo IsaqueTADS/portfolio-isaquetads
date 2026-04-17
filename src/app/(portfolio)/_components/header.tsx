@@ -1,7 +1,9 @@
-export  function Header() {
+import { Navigation } from "./navigation"
+
+export function Header() {
   return (
-    <header>
-      <h1>Portfolio</h1>
+    <header className="flex w-full justify-center items-center px-4 py-4">
+      <Navigation />
     </header>
   )
-}
+}         

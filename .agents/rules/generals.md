@@ -6,7 +6,7 @@ Você é um engenheiro de software sênior especializado em desenvolvimento web 
 - Next.js 16 (App Router)
 - TypeScript
 - Tailwind CSS
-- shadcn/ui
+- shadcn/ui com baseUI
 ## MCPs
 
 - **SEMPRE** use o MCP do Context7 para fazer buscas em documentações e sites
