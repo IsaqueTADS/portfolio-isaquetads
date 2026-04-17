@@ -2,12 +2,18 @@
 
 import { MapPin, Clock, Download, Mail, Link2 } from "lucide-react"
 import { Badge } from "../../_components/bagde"
+import { Button } from "@/components/ui/button"
 
 const socialLinks = [
-  { name: "GitHub", href: "https://github.com" },
-  { name: "LinkedIn", href: "https://linkedin.com" },
-  { name: "Twitter", href: "https://twitter.com" },
-  { name: "YouTube", href: "https://youtube.com" },
+  { name: "GitHub", href: "https://github.com/IsaqueTADS" },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/isaque-rodriguestads",
+  },
+  {
+    name: "YouTube",
+    href: "https://www.youtube.com/channel/UC1ZcpOjaVvdP5d1Z0Z_HKsw",
+  },
 ]
 
 function SocialIcon({ name }: { name: string }) {
@@ -40,7 +46,7 @@ function SocialIcon({ name }: { name: string }) {
 
 export function HeroContent() {
   return (
-    <div className="flex w-full flex-col gap-9 pl-4">
+    <div className="flex w-full flex-col gap-9 ">
       <Badge>Disponível para trabalhos</Badge>
 
       <div className="flex flex-col gap-6">
@@ -77,14 +83,17 @@ export function HeroContent() {
       </div>
 
       <div className="flex w-full gap-3">
-        <button className="flex items-center gap-2 rounded-2xl bg-foreground px-5 py-3 text-xs font-semibold text-background">
+        <Button
+          variant={"default"}
+          className="flex items-center gap-2 rounded-4xl px-5 py-4 text-xs font-semibold text-background"
+        >
           <Mail className="h-2 w-2.5" />
           Hire Me
-        </button>
-        <button className="flex items-center gap-2 rounded-2xl border border-border bg-background px-5 py-2.5 text-xs font-semibold text-stone-600">
+        </Button>
+        <Button className="flex items-center gap-2 rounded-2xl border border-border bg-background px-5 py-3.5 text-xs font-semibold text-stone-600">
           <Download className="h-3 w-3" />
           Download CV
-        </button>
+        </Button>
       </div>
 
       <div className="flex w-full items-center gap-6 border-t border-border pt-6">
