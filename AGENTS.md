@@ -24,6 +24,7 @@ npm run typecheck # TypeScript
 - **Button**: sempre usar componente shadcn `@/components/ui/button`, nunca `<button>` nativo
 - **Imagens**: sempre usar `<Image>` do Next.js
 - **Componentes**: nunca mais de um por arquivo
+- **Separação**: sempre separar em componentes quando a página tem múltiplas seções lógica (criar pasta `_components` na página)
 - **Comentários**: nunca escrever
 - **Verificação**: não usar `npm run dev` para testar; use lint + typecheck
 
