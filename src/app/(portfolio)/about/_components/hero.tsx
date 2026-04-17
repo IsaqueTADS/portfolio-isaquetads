@@ -1,17 +1,12 @@
 import Image from "next/image"
 import { MapPin, Clock } from "lucide-react"
+import { Badge } from "../../_components/bagde"
 
 export function HeroAbout() {
   return (
     <section className="flex gap-12">
       <div className="flex w-[60%] flex-col gap-6">
-        <div className="flex w-[40%] items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-sm">
-          <span className="h-1.5 w-1.5 rounded-full bg-foreground" />
-          <span className="text-xs font-medium text-foreground">
-            Desenvolvedor Full Stack
-          </span>
-        </div>
-
+        <Badge>Desenvolvedor Full Stack</Badge>
         <h1 className="font-heading text-[72px] leading-none font-extrabold tracking-[-1.8px] text-foreground">
           Sobre Mim
         </h1>
