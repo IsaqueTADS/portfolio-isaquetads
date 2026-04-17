@@ -17,7 +17,7 @@ export function Navigation() {
   const pathname = usePathname()
 
   return (
-    <nav className="flex items-center justify-center gap-4 rounded-full border border-border bg-background px-2 py-1 shadow-[0_4px_17.5px_rgba(0,0,0,0.08)]">
+    <nav className="flex items-center justify-center gap-4 rounded-full border border-border bg-background px-2 py-1 shadow-[0_4px_17.5px_rgba(0,0,0,0.08)] sm:fixed sm:top-5 sm:z-50">
       {navItems.map((item) => {
         const isActive = pathname === item.href
         return (
