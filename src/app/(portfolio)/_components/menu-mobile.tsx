@@ -50,7 +50,7 @@ export function MenuMobile({ navItems }: { navItems: NavItems }) {
                     "flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all duration-150",
                     "animate-in fade-in slide-in-from-top-1",
                     isActive
-                      ? "bg-foreground text-background"
+                      ? "bg-primary text-background"
                       : "text-muted-foreground hover:bg-secondary hover:text-foreground",
                   ].join(" ")}
                 >

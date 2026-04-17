@@ -46,25 +46,25 @@ function SocialIcon({ name }: { name: string }) {
 
 export function HeroContent() {
   return (
-    <div className="flex w-full flex-col gap-9 ">
+    <div className="flex w-full flex-col gap-9">
       <Badge>Disponível para trabalhos</Badge>
 
-      <div className="flex flex-col gap-6">
-        <h1 className="w-full font-heading text-7xl leading-none font-extrabold tracking-tight text-foreground">
+      <div className="flex flex-col gap-1 sm:gap-6">
+        <h1 className="w-full font-heading text-5xl leading-none font-extrabold tracking-tight text-foreground sm:text-7xl">
           Olá sou Isaque
           <br />
           Rodrigues
         </h1>
 
         <div className="flex h-14 w-full items-center gap-0">
-          <span className="font-heading text-5xl font-extrabold text-foreground">
+          <span className="font-heading text-3xl font-extrabold text-foreground sm:text-5xl">
             Fullstack Developer
           </span>
           <div className="ml-6 h-14 w-px bg-border" />
         </div>
       </div>
 
-      <p className="w-120 text-sm leading-relaxed text-muted-foreground">
+      <p className="text-sm leading-relaxed text-muted-foreground sm:w-120">
         Full Stack Developer | ADS Student @ IFNMG | TypeScript • React •
         Node.js • Tailwind • shadcn/ui • MySQL • PostgreSQL • Prisma • Drizzle
       </p>
