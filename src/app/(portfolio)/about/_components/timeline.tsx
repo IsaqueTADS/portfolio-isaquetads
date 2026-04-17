@@ -1,5 +1,3 @@
-"use client"
-
 const experience = [
   {
     title: "IFNMG - ADS",

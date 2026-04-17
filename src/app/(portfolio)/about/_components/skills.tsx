@@ -1,5 +1,3 @@
-"use client"
-
 const skills = {
   frontend: ["React", "TypeScript", "Tailwind CSS", "shadcn/ui"],
   backend: ["Node.js", "Express", "Fastify"],
