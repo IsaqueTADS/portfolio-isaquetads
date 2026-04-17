@@ -1,5 +1,14 @@
 import { ArrowUpRight } from "lucide-react"
-import { Project } from "./projects-grid"
+
+export interface Project {
+  id: string
+  title: string
+  description: string
+  technologies: string[]
+  githubUrl?: string
+  demoUrl?: string
+  linkedinUrl?: string
+}
 
 export function ProjectCard({ project }: { project: Project }) {
   return (

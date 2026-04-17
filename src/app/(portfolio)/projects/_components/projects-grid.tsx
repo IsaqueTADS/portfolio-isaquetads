@@ -1,45 +1,44 @@
-import { ProjectCard } from "./project-card"
+import { ProjectCard, type Project } from "./project-card"
 
-export interface Project {
+export interface ProjectGroup {
   id: string
   title: string
-  description: string
-  technologies: string[]
-  githubUrl?: string
-  demoUrl?: string
-  linkedinUrl?: string
-  group?: string
-  groupTitle?: string
+  projects: Project[]
 }
 
-const projects: Project[] = [
+export const projectsGrouped: ProjectGroup[] = [
   {
-    id: "1",
-    title: "E-commerce API",
-    description:
-      "API RESTful completa para sistema de e-commerce com autenticação JWT, gestão de produtos e pedidos.",
-    technologies: ["Node.js", "Express", "PostgreSQL", "Prisma"],
-    githubUrl: "https://github.com/IsaqueTADS/ecommerce-api",
-    group: "ecommerce",
-    groupTitle: "E-commerce Completo",
+    id: "ecommerce",
+    title: "E-commerce Completo",
+    projects: [
+      {
+        id: "1",
+        title: "E-commerce API",
+        description:
+          "API RESTful completa para sistema de e-commerce com autenticação JWT, gestão de produtos e pedidos.",
+        technologies: ["Node.js", "Express", "PostgreSQL", "Prisma"],
+        githubUrl: "https://github.com/IsaqueTADS/ecommerce-api",
+      },
+      {
+        id: "1f",
+        title: "E-commerce Web",
+        description:
+          "Frontend web do sistema e-commerce com React e integração API REST.",
+        technologies: ["React", "TypeScript", "Tailwind"],
+        githubUrl: "https://github.com/IsaqueTADS/ecommerce-web",
+      },
+      {
+        id: "1m",
+        title: "E-commerce Mobile",
+        description: "Aplicativo mobile para iOS e Android com React Native.",
+        technologies: ["React Native", "TypeScript", "Expo"],
+        githubUrl: "https://github.com/IsaqueTADS/ecommerce-mobile",
+      },
+    ],
   },
-  {
-    id: "1f",
-    title: "E-commerce Web",
-    description:
-      "Frontend web do sistema e-commerce com React e integração API REST.",
-    technologies: ["React", "TypeScript", "Tailwind"],
-    githubUrl: "https://github.com/IsaqueTADS/ecommerce-web",
-    group: "ecommerce",
-  },
-  {
-    id: "1m",
-    title: "E-commerce Mobile",
-    description: "Aplicativo mobile para iOS e Android com React Native.",
-    technologies: ["React Native", "TypeScript", "Expo"],
-    githubUrl: "https://github.com/IsaqueTADS/ecommerce-mobile",
-    group: "ecommerce",
-  },
+]
+
+export const projectsStandalone: Project[] = [
   {
     id: "2",
     title: "Task Manager",
@@ -84,55 +83,30 @@ const projects: Project[] = [
   },
 ]
 
-function getGroupedProjects() {
-  const grouped: Record<string, Project[]> = {}
-  const standalone: Project[] = []
-
-  for (const project of projects) {
-    if (project.group) {
-      if (!grouped[project.group]) {
-        grouped[project.group] = []
-      }
-      grouped[project.group].push(project)
-    } else {
-      standalone.push(project)
-    }
-  }
-
-  return { grouped, standalone }
-}
-
 export function ProjectsGrid() {
-  const { grouped, standalone } = getGroupedProjects()
-
   return (
     <section className="flex flex-col gap-12">
-      {Object.entries(grouped).map(([groupKey, groupProjects]) => {
-        const groupTitle = groupProjects[0].groupTitle || groupKey
-        console.log(groupKey, groupProjects)
-
-        return (
-          <div key={groupKey} className="flex flex-col gap-6">
-            <div className="flex items-center gap-4">
-              <h2 className="font-heading text-2xl font-bold text-foreground">
-                {groupTitle}
-              </h2>
-              <div className="h-px flex-1 bg-border" />
-              <span className="text-sm text-muted-foreground">
-                {groupProjects.length} projetos
-              </span>
-            </div>
-
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {groupProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
-              ))}
-            </div>
+      {projectsGrouped.map((group) => (
+        <div key={group.id} className="flex flex-col gap-6">
+          <div className="flex items-center gap-4">
+            <h2 className="font-heading text-2xl font-bold text-foreground">
+              {group.title}
+            </h2>
+            <div className="h-px flex-1 bg-border" />
+            <span className="text-sm text-muted-foreground">
+              {group.projects.length} projetos
+            </span>
           </div>
-        )
-      })}
 
-      {standalone.length > 0 && (
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {group.projects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        </div>
+      ))}
+
+      {projectsStandalone.length > 0 && (
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-4">
             <h2 className="font-heading text-2xl font-bold text-foreground">
@@ -140,12 +114,12 @@ export function ProjectsGrid() {
             </h2>
             <div className="h-px flex-1 bg-border" />
             <span className="text-sm text-muted-foreground">
-              {standalone.length} projetos
+              {projectsStandalone.length} projetos
             </span>
           </div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {standalone.map((project) => (
+            {projectsStandalone.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
