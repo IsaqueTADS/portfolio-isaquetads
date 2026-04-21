@@ -6,6 +6,7 @@ import { Briefcase, Code, Home, Mail, User } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { NavigationMobile } from "./navigation-mobile"
+import { ModeToggle } from "./mode-toggle"
 
 const navItems = [
   { label: "Home", href: "/", icon: Home, size: 15 },
@@ -47,6 +48,7 @@ export function Navigation() {
           </Button>
         )
       })}
+      <ModeToggle />
     </nav>
   )
 }
