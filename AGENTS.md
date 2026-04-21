@@ -3,38 +3,51 @@
 ## Comandos
 
 ```bash
-npm run dev      # Servidor de desenvolvimento (Turbopack)
-npm run build    # Build de produção
-npm run start    # Iniciar servidor de produção
-npm run lint     # ESLint
-npm run format   # Prettier (escreve nos arquivos!)
-npm run typecheck # TypeScript
+pnpm dev        # Dev server (Turbopack)
+pnpm build      # Production build
+pnpm start      # Production server
+pnpm lint       # ESLint
+pnpm format    # Prettier (escreve nos arquivos!)
+pnpm typecheck # TypeScript
 ```
 
 ## Toolbox
 
 - **Context7 MCP**: sempre para consultas de documentação
-- **shadcn/ui com baseUI**: `npx shadcn@latest add <componente>`
-- **pnpm**: package manager
+- **shadcn/ui**: `npx shadcn@latest add <componente>`
 
 ## Regras importantes
 
 - **Tailwind v4**: sem `tailwind.config.js` - configuração via CSS (`src/app/globals.css`)
-- **Tailwind classes**: sempre usar classes canônicas (ex: `h-3` ao invés de `h-[12px]`, `w-5` ao invés de `w-[20px]`)
-- **Cores do tema**: usar tokens do tema (`text-background`, `bg-foreground`, etc.) - nunca hard-coded
-- **Button**: sempre usar componente shadcn `@/components/ui/button`, nunca `<button>` nativo
+- **Cores**: usar tokens do tema (`text-background`, `bg-foreground`, etc.) - nunca hard-coded
+- **Button**: sempre usar shadcn `@/components/ui/button`, nunca `<button>` nativo
 - **Imagens**: sempre usar `<Image>` do Next.js
-- **Componentes**: nunca mais de um por arquivo
-- **Separação**: sempre separar em componentes quando a página tem múltiplas seções lógica (criar pasta `_components` na página)
+- **Componentes**: um por arquivo, separar em `_components` para páginas
 - **Comentários**: nunca escrever
-- **Verificação**: não usar `npm run dev` para testar; use lint + typecheck
+- **Verificação**: use lint + typecheck, não `pnpm dev`
 
 ## Estrutura
 
-- `src/app/` - rotas do Next.js (App Router)
-- `(portfolio)` - route group para organização
-- `_components` - componentes locais da página
-- `src/components/ui/` - componentes shadcn
-- `src/lib/utils.ts` - utilitários (cn, etc)
-- `src/components/theme-provider.tsx` - envolve a app
-- **Idioma**: pt-BR (definido no root layout)
+```
+src/app/               # Rotas Next.js (App Router)
+├── (portfolio)/       # Route group
+│   ├── _components/   # Componentes locais
+│   ├── about/
+│   ├── projects/
+│   └── ...
+src/components/ui/    # shadcn/ui
+src/lib/utils.ts      # cn(), utilitários
+src/components/       # Componentes globais
+```
+
+## Info adicional
+
+- **Idioma**: pt-BR (definido em `src/app/layout.tsx`)
+- **Fontes**: Inter, Geist, Manrope (via `next/font/google`)
+- **Stack**: Next.js 16, React 19, TypeScript
+- **Testes**: não configurado
+
+## Commits
+
+- Faça commits pequenos e atômicos (uma ação por commit)
+- Sempre peça aprovação do usuário antes de commitar
