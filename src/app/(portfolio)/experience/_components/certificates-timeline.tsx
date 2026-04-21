@@ -1,44 +1,5 @@
-import { certificates, type Certificate } from "@/data/certificates"
-
-function CertificateItem({ cert, index, total }: { cert: Certificate; index: number; total: number }) {
-  return (
-    <div className="flex gap-6">
-      <div className="flex flex-col items-center">
-        <span className="h-3 w-3 rounded-full bg-foreground" />
-        {index < total - 1 && <div className="h-32 w-px bg-border" />}
-      </div>
-      <div className="flex flex-col gap-2 pb-8">
-        <h3 className="text-lg font-semibold text-foreground">{cert.title}</h3>
-        <p className="text-sm font-medium text-primary">
-          {cert.institution} · {cert.date}
-        </p>
-        {cert.technologies && cert.technologies.length > 0 && (
-          <div className="flex flex-wrap gap-2">
-            {cert.technologies.map((tech) => (
-              <span
-                key={tech}
-                className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        )}
-        {cert.description && (
-          <p className="text-sm text-muted-foreground">{cert.description}</p>
-        )}
-        <a
-          href={cert.filePath}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-1 inline-flex w-fit text-sm font-medium text-primary underline underline-offset-4 transition-colors hover:text-primary/80"
-        >
-          Ver Certificado →
-        </a>
-      </div>
-    </div>
-  )
-}
+import { FileText } from "lucide-react"
+import { certificates } from "@/data/certificates"
 
 export function CertificatesTimeline() {
   return (
@@ -47,14 +8,37 @@ export function CertificatesTimeline() {
         Certificados
       </h2>
 
-      <div className="flex flex-col gap-8 pl-4">
-        {certificates.map((cert, index) => (
-          <CertificateItem
+      <div className="flex flex-col gap-3">
+        {certificates.map((cert) => (
+          <a
             key={cert.id}
-            cert={cert}
-            index={index}
-            total={certificates.length}
-          />
+            href={cert.filePath}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 rounded-lg border border-border bg-card p-4 transition-all hover:bg-secondary/50"
+          >
+            <FileText className="h-5 w-5 shrink-0 text-primary" />
+            <div className="flex flex-1 flex-col gap-0.5">
+              <h3 className="text-base font-semibold text-foreground">
+                {cert.title}
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                {cert.institution} · {cert.date}
+              </p>
+            </div>
+            {cert.technologies && cert.technologies.length > 0 && (
+              <div className="hidden flex-wrap gap-1.5 sm:flex">
+                {cert.technologies.slice(0, 2).map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-full bg-secondary px-2 py-0.5 text-xs font-medium text-secondary-foreground"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            )}
+          </a>
         ))}
       </div>
     </section>
