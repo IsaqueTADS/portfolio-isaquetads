@@ -23,7 +23,7 @@ export function MenuMobile({ navItems }: { navItems: NavItems }) {
             {...props}
             variant="outline"
             size="icon"
-            className="h-9 w-9 rounded-xl border-border/60 bg-background/80 backdrop-blur-sm shadow-sm"
+            className="h-9 w-9 rounded-xl border-border/60 bg-background/80 shadow-sm backdrop-blur-sm"
           >
             <Menu className="h-4 w-4 text-foreground" />
           </Button>
