@@ -66,8 +66,9 @@ export function HeroContent() {
       </div>
 
       <p className="text-sm leading-relaxed text-muted-foreground sm:w-120">
-        Full Stack Developer | ADS Student @ IFNMG | TypeScript • React •
-        Node.js • Tailwind • shadcn/ui • MySQL • PostgreSQL • Prisma • Drizzle
+        Desenvolvedor Full Stack e estudante de ADS no IFNMG, especializado em
+        TypeScript, React e Node.js, com foco em arquitetura limpa, APIs
+        escaláveis e aplicações modernas com alta qualidade de código.
       </p>
 
       <div className="flex h-5 w-full items-center gap-4">
@@ -84,14 +85,22 @@ export function HeroContent() {
       </div>
 
       <div className="flex w-full gap-3">
-        <Link
-          href="/contact"
-          className="inline-flex items-center gap-2 rounded-2xl bg-primary px-9 py-5 text-xs font-semibold text-primary-foreground transition-colors hover:bg-primary/80"
+        <Button
+          size="lg"
+          className="rounded-2xl px-9 py-5 text-xs font-semibold"
+          render={(props) => (
+            <Link {...props} href="/contact">
+              <Mail className="h-3 w-3" />
+              Fale Comigo
+            </Link>
+          )}
+        />
+
+        <Button
+          variant="outline"
+          size="lg"
+          className="text- rounded-2xl px-4 py-5 text-xs font-semibold"
         >
-          <Mail className="h-2 w-2.5" />
-          Fale Comigo
-        </Link>
-        <Button className="flex items-center gap-2 rounded-2xl border border-border bg-background px-4 py-5 text-xs font-semibold text-stone-600">
           <Download className="h-3 w-3" />
           Download CV
         </Button>

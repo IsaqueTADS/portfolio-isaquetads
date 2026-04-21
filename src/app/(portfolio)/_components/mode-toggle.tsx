@@ -16,7 +16,7 @@ export function ModeToggle() {
   const { setTheme } = useTheme()
 
   return (
-    <DropdownMenu>
+    <DropdownMenu modal={false}>
       <DropdownMenuTrigger
         render={(props) => (
           <Button variant="outline" size="icon" {...props}>
