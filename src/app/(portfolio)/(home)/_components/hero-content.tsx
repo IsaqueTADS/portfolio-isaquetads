@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { MapPin, Clock, Download, Mail, Link2 } from "lucide-react"
 import { Badge } from "../../_components/bagde"
 import { Button } from "@/components/ui/button"
@@ -83,13 +84,13 @@ export function HeroContent() {
       </div>
 
       <div className="flex w-full gap-3">
-        <Button
-          variant={"default"}
-          className="flex items-center gap-2 rounded-2xl px-9 py-5 text-xs font-semibold text-background"
+        <Link
+          href="/contact"
+          className="inline-flex items-center gap-2 rounded-2xl bg-primary px-9 py-5 text-xs font-semibold text-primary-foreground transition-colors hover:bg-primary/80"
         >
           <Mail className="h-2 w-2.5" />
-          Hire Me
-        </Button>
+          Fale Comigo
+        </Link>
         <Button className="flex items-center gap-2 rounded-2xl border border-border bg-background px-4 py-5 text-xs font-semibold text-stone-600">
           <Download className="h-3 w-3" />
           Download CV
