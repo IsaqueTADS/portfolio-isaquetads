@@ -21,12 +21,12 @@ const contactMethods = [
 export default function Page() {
   return (
     <div className="flex px-4">
-      <div className="flex w-full flex-col gap-16">
+      <div className="flex w-full flex-col gap-16 min-h-screen">
         <section className="flex flex-col gap-6">
           <Badge>Contato</Badge>
 
           <div className="flex flex-col gap-4">
-            <h1 className="font-heading text-3xl sm:text-5xl leading-none font-extrabold tracking-tight text-foreground">
+            <h1 className="font-heading text-5xl sm:text-7xl leading-none font-extrabold tracking-tight text-foreground">
               Vamos trabalhar juntos?
             </h1>
 
