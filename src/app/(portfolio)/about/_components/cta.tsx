@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
-import { Download, Mail, ArrowRight } from "lucide-react"
+import Link from "next/link"
+import { Mail, ArrowRight } from "lucide-react"
 
 export function CTA() {
   return (
@@ -17,17 +17,14 @@ export function CTA() {
         </p>
       </div>
 
-      <div className="flex gap-3">
-        <Button size="lg" className="gap-2">
-          <Mail className="h-4 w-4" />
-          Hire Me
-          <ArrowRight className="h-3.5 w-3.5 opacity-70" />
-        </Button>
-        <Button variant="outline" size="lg" className="gap-2">
-          <Download className="h-4 w-4" />
-          Download CV
-        </Button>
-      </div>
+      <Link
+        href="/contact"
+        className="inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg border border-transparent bg-primary px-4 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/80"
+      >
+        <Mail className="h-4 w-4" />
+        Fale Comigo
+        <ArrowRight className="h-3.5 w-3.5 opacity-70" />
+      </Link>
     </section>
   )
 }
