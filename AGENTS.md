@@ -51,3 +51,4 @@ src/components/       # Componentes globais
 
 - Faça commits pequenos e atômicos (uma ação por commit)
 - Sempre peça aprovação do usuário antes de commitar
+- **Nunca** faça push para o repositório remoto sem autorização explícita
