@@ -1,6 +1,7 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { ModeToggle } from "./mode-toggle"
@@ -14,21 +15,17 @@ export function NavigationDesktop({ navItems }: { navItems: NavItems }) {
       {navItems.map((item) => {
         const isActive = pathname === item.href
         return (
-          <Button
+          <Link
             key={item.href}
-            variant={isActive ? "default" : "ghost"}
-            className={"rounded-3xl py-4"}
+            href={item.href}
+            className={cn(
+              buttonVariants({ variant: isActive ? "default" : "ghost" }),
+              "flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium",
+            )}
           >
-            <Link
-              key={item.href}
-              href={item.href}
-              className="flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium"
-              data-active={isActive ? "true" : undefined}
-            >
-              <item.icon size={item.size} />
-              <span>{item.label}</span>
-            </Link>
-          </Button>
+            <item.icon size={item.size} />
+            <span>{item.label}</span>
+          </Link>
         )
       })}
       <ModeToggle />

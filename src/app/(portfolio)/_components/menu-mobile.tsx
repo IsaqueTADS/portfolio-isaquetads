@@ -40,7 +40,7 @@ export function MenuMobile({ navItems }: { navItems: NavItems }) {
           return (
             <DropdownMenuItem
               key={item.href}
-              className="rounded-xl p-0 focus:bg-transparent"
+              className="rounded-xl p-0"
               render={(props) => (
                 <Link
                   {...props}
