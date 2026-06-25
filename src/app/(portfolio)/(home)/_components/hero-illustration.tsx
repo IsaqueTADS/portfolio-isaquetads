@@ -4,8 +4,9 @@ import Image from "next/image"
 
 export function HeroIllustration() {
   return (
-    <div className="relative h-100 w-90 sm:h-125 sm:w-138">
-      <div className="absolute inset-0 overflow-hidden rounded-2xl">
+    <div className="relative">
+      <div className="relative h-80 w-72 overflow-hidden rounded-3xl sm:h-112 sm:w-96">
+        <div className="absolute inset-0 rounded-3xl ring-1 ring-border/50" />
         <Image
           src="/foto-perfil-isaquetads.jpg"
           alt="Isaque Rodrigues"

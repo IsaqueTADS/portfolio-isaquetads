@@ -33,7 +33,7 @@ export default function Page() {
           <Badge>Contato</Badge>
 
           <div className="flex flex-col gap-4">
-            <h1 className="font-heading text-5xl sm:text-7xl leading-none font-extrabold tracking-tight text-foreground">
+            <h1 className="font-heading text-5xl sm:text-7xl leading-tight font-extrabold tracking-tight text-foreground">
               Vamos trabalhar juntos?
             </h1>
 
