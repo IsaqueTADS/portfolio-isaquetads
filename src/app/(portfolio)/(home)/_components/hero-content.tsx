@@ -41,13 +41,22 @@ export function HeroContent() {
         />
 
         <Button
+          nativeButton={false}
           variant="outline"
           size="lg"
           className="rounded-2xl px-6 py-5 text-xs font-semibold"
-        >
-          <Download className="h-3.5 w-3.5" />
-          Download CV
-        </Button>
+          render={(props) => (
+            <Link
+              {...props}
+              href="/cv/certificado-dev-fullstack-isaque.pdf"
+              target="_blank"
+              download
+            >
+              <Download className="h-3.5 w-3.5" />
+              Download CV
+            </Link>
+          )}
+        />
       </div>
     </div>
   )
