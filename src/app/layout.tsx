@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono, Inter } from "next/font/google"
+import type { Metadata } from "next"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -10,6 +11,23 @@ const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 })
+
+export const metadata: Metadata = {
+  title: {
+    template: "%s | Isaque Rodrigues",
+    default: "Isaque Rodrigues | Fullstack Developer",
+  },
+  description:
+    "Portfólio de Isaque Rodrigues — Desenvolvedor Full Stack especializado em TypeScript, React e Node.js.",
+  metadataBase: new URL("https://portfolio.isaque.dev.br"),
+  openGraph: {
+    title: "Isaque Rodrigues | Fullstack Developer",
+    description:
+      "Desenvolvedor Full Stack especializado em TypeScript, React e Node.js.",
+    locale: "pt_BR",
+    type: "website",
+  },
+}
 
 export default function RootLayout({
   children,

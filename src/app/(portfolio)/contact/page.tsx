@@ -1,5 +1,12 @@
+import type { Metadata } from "next"
 import { Badge } from "../_components/bagde"
 import { Mail, Link2, ArrowRight } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Contato",
+  description:
+    "Entre em contato com Isaque Rodrigues para projetos freelance, colaborações e oportunidades.",
+}
 
 const contactMethods = [
   {
