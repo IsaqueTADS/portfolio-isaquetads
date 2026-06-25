@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 export function EmailCta() {
   return (
     <Button
+      nativeButton={false}
       size="lg"
       className="rounded-xl px-6"
       render={(props) => (

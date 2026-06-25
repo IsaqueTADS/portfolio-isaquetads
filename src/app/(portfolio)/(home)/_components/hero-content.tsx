@@ -29,6 +29,7 @@ export function HeroContent() {
 
       <div className="flex gap-3">
         <Button
+          nativeButton={false}
           size="lg"
           className="rounded-2xl px-8 py-5 text-xs font-semibold"
           render={(props) => (
