@@ -6,7 +6,7 @@ export interface Language {
 export interface Skill {
   id: string
   name: string
-  category: "frontend" | "backend" | "database" | "tools" | "other"
+  category: "frontend" | "backend" | "database" | "mobile" | "tools" | "other"
 }
 
 export const languages: Language[] = [
