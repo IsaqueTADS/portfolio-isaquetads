@@ -20,7 +20,7 @@ export default function Page() {
       </main>
 
       <section className="mx-auto mt-24 max-w-6xl space-y-8 px-4 sm:mt-32">
-       <TechCarousel size="lg" />
+       <TechCarousel size="md" delay={200} />
       </section>
     </div>
   )

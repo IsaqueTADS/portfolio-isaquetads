@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import Autoplay from "embla-carousel-autoplay"
+import AutoScroll from "embla-carousel-auto-scroll"
 import {
   Carousel,
   CarouselContent,
@@ -14,6 +14,7 @@ type TechCarouselVariant = "square" | "rectangle"
 interface TechCarouselProps {
   size?: TechCarouselSize
   variant?: TechCarouselVariant
+  delay?: number
 }
 
 const config: Record<
@@ -69,7 +70,9 @@ const variantClass: Record<TechCarouselVariant, string> = {
 export function TechCarousel({
   size = "md",
   variant = "square",
+  delay = 800,
 }: TechCarouselProps) {
+  const speed = 800 / delay
   const { icon: iconClass, gap, negativeGap } = config[size]
   const baseContainer = `flex items-center justify-center rounded-2xl w-fit ${variantClass[variant]}`
   const externalContainer = `${baseContainer} border border-border bg-secondary/40`
@@ -80,11 +83,10 @@ export function TechCarousel({
         align: "center",
         loop: true,
         dragFree: true,
-        duration: 50,
       }}
       plugins={[
-        Autoplay({
-          delay: 800,
+        AutoScroll({
+          speed,
           stopOnInteraction: false,
           stopOnMouseEnter: true,
         }),
