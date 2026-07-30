@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { HeroContent } from "./_components/hero-content"
 import { HeroIllustration } from "./_components/hero-illustration"
+import { TechCarousel } from "@/components/tech-carousel"
 
 export const metadata: Metadata = {
   title: "Início",
@@ -17,6 +18,10 @@ export default function Page() {
           <HeroIllustration />
         </div>
       </main>
+
+      <section className="mx-auto mt-24 max-w-6xl space-y-8 px-4 sm:mt-32">
+       <TechCarousel size="lg" />
+      </section>
     </div>
   )
 }

@@ -5,6 +5,7 @@ import { Timeline } from "./_components/timeline"
 import { Differentials } from "./_components/differentials"
 import { YoutubeSection } from "./_components/youtube"
 import { CTA } from "./_components/cta"
+import { TechCarousel } from "@/components/tech-carousel"
 
 export const metadata: Metadata = {
   title: "Sobre",
@@ -17,6 +18,7 @@ export default function Page() {
     <div className="flex px-4 ">
       <div className="flex w-full flex-col gap-16">
         <HeroAbout />
+        <TechCarousel size="sm" />
         <Skills />
         <Timeline />
         <Differentials />
