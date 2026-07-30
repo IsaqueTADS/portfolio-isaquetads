@@ -51,6 +51,50 @@ export const projectsGrouped: ProjectGroup[] = [
       },
     ],
   },
+  {
+    id: "cashybank",
+    title: "CashyBank - Controle Financeiro",
+    projects: [
+      {
+        id: "cashybank-api",
+        title: "CashyBank API",
+        description:
+          "API REST de controle financeiro pessoal. Gerencia transações (receitas/despesas), autenticação JWT com hash argon2, categorias, paginação, filtros, soft delete e cálculo de saldo total. Documentação interativa via Scalar.",
+        technologies: ["Node.js", "TypeScript", "Fastify", "Prisma", "PostgreSQL", "Zod", "JWT", "Vitest"],
+        githubUrl: "https://github.com/IsaqueTADS/CashyBank-API",
+      },
+      {
+        id: "cashybank-mobile",
+        title: "CashyBank Mobile",
+        description:
+          "Aplicativo mobile desenvolvido com React Native e Expo para gerenciar finanças pessoais, integrado à API CashyBank.",
+        technologies: ["React Native", "Expo", "TypeScript"],
+        githubUrl: "https://github.com/IsaqueTADS/app-native-cashybank",
+      },
+    ],
+  },
+  {
+    id: "fit-ai",
+    title: "Fit.AI - Treinos com Inteligência Artificial",
+    projects: [
+      {
+        id: "treinos-api",
+        title: "Fit.AI API",
+        description:
+          "API RESTful para gerenciamento de treinos e planos de exercícios com integração de IA. Conta com personal trainer virtual via Vercel AI SDK + Gemini 2.5, autenticação com Better Auth e Google OAuth, e ambiente conteinerizado com Docker.",
+        technologies: ["Node.js", "TypeScript", "Fastify", "Prisma", "PostgreSQL", "Better Auth", "Vercel AI SDK", "Gemini", "Docker", "Zod"],
+        githubUrl: "https://github.com/IsaqueTADS/treinos-api",
+      },
+      {
+        id: "treinos-frontend",
+        title: "Fit.AI Frontend",
+        description:
+          "Aplicação mobile-first para gerenciamento de treinos com IA. Chat com personal trainer virtual, consistency tracker, streak counter e estatísticas de desempenho.",
+        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "better-auth", "AI SDK"],
+        githubUrl: "https://github.com/IsaqueTADS/treinos-frontend",
+      },
+    ],
+  },
 ]
 
 export const projectsStandalone: Project[] = [
@@ -62,6 +106,14 @@ export const projectsStandalone: Project[] = [
     technologies: ["React", "TypeScript", "Vite", "Recharts"],
     githubUrl: "https://github.com/IsaqueTADS/fintech",
     demoUrl: "https://fintech-orcin-sigma.vercel.app",
+  },
+  {
+    id: "dogs",
+    title: "Dogs - Rede Social para Cachorros",
+    description:
+      "Rede social para fotos de cachorros com feed, sistema de comentários, upload de imagens e estatísticas. Projeto desenvolvido durante o curso de React da Origamid.",
+    technologies: ["React", "JavaScript", "Vite"],
+    githubUrl: "https://github.com/IsaqueTADS/Dogs",
   },
 ]
 
@@ -75,10 +127,26 @@ export const projectsExperience: Project[] = [
     githubUrl: "https://github.com/IsaqueTADS/GymPass-API",
   },
   {
+    id: "cashybank-api",
+    title: "CashyBank API",
+    description:
+      "API REST de controle financeiro pessoal. Gerencia transações com autenticação JWT, categorias, paginação, soft delete e documentação interativa via Scalar.",
+    technologies: ["Node.js", "TypeScript", "Fastify", "Prisma", "PostgreSQL", "Zod", "JWT", "Vitest"],
+    githubUrl: "https://github.com/IsaqueTADS/CashyBank-API",
+  },
+  {
+    id: "treinos-api",
+    title: "Fit.AI",
+    description:
+      "API RESTful para gerenciamento de treinos com personal trainer virtual via IA. Autenticação com Better Auth + Google OAuth, CI/CD e deploy conteinerizado.",
+    technologies: ["Node.js", "TypeScript", "Fastify", "Prisma", "PostgreSQL", "Better Auth", "Vercel AI SDK", "Gemini", "Docker"],
+    githubUrl: "https://github.com/IsaqueTADS/treinos-api",
+  },
+  {
     id: "focuz",
     title: "Focuz",
     description:
-      "API RESTful para gerenciamento de eventos com pagamentos Stripe, geolocalização, categorização e sistema de destaque. Includes aplicativo web para descoberta de eventos.",
+      "API RESTful para gerenciamento de eventos com pagamentos Stripe, geolocalização, categorização e sistema de destaque. Inclui aplicativo web para descoberta de eventos.",
     technologies: ["Express", "React", "TypeScript", "Stripe"],
     githubUrl: "https://github.com/IsaqueTADS/FocuzAPI",
     demoUrl: "https://github.com/IsaqueTADS/Focuz-FrontEnd",

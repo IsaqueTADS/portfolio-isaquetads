@@ -12,8 +12,8 @@ export function ProjectsHero() {
 
         <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
           Uma coleção de projetos que desenvolvi para praticar e explorar
-          diferentes tecnologias. Cada projeto traz desafios únicos e
-          oportunidades de aprendizado.
+          diferentes tecnologias, desde APIs completas até interfaces ricas
+          e aplicativos mobile com integração de IA.
         </p>
       </div>
     </section>

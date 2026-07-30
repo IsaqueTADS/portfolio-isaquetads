@@ -4,6 +4,7 @@ const categoryLabels: Record<string, string> = {
   frontend: "Frontend",
   backend: "Backend",
   database: "Banco de Dados",
+  mobile: "Mobile",
   tools: "Ferramentas",
   other: "Outros",
 }

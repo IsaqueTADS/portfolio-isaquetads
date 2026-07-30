@@ -43,22 +43,28 @@ export function HeroAbout() {
           <p>
             Experiência com bancos de dados relacionais como MySQL e PostgreSQL,
             utilizando Prisma e Drizzle ORM para modelagem eficiente e
-            otimização de queries.
+            otimização de queries. Também atuo com validação de dados com Zod e
+            testes automatizados com Vitest.
           </p>
 
           <p>
             Aplico conceitos de arquitetura limpa (Clean Architecture),
             princípios SOLID e padrões como Repository e Gateway, além de
-            implementar autenticação com JWT e testes automatizados (unitários e
-            E2E).
+            implementar autenticação com JWT, Better Auth e integração de
+            pagamentos com Stripe.
           </p>
 
           <p>
-            Também possuo experiência em deploy e entrega contínua (CI/CD),
-            realizando o provisionamento e publicação de aplicações em ambientes
-            reais utilizando AWS EC2 e banco de dados serverless com Neon,
-            garantindo pipelines automatizadas e aplicações estáveis em
-            produção.
+            No ecossistema mobile, desenvolvo aplicativos com React Native e
+            Expo. Também integro inteligência artificial em aplicações reais
+            utilizando Vercel AI SDK e modelos como Gemini.
+          </p>
+
+          <p>
+            Possuo experiência em deploy e entrega contínua (CI/CD), realizando
+            o provisionamento e publicação de aplicações em ambientes reais
+            utilizando AWS EC2 e banco de dados serverless com Neon, garantindo
+            pipelines automatizadas e aplicações estáveis em produção.
           </p>
         </div>
 

@@ -5,7 +5,7 @@ import { ProjectsGrid } from "./_components/projects-grid"
 export const metadata: Metadata = {
   title: "Projetos",
   description:
-    "Conheça os projetos de Isaque Rodrigues: GymPass API, Focuz, Fintech Dashboard e mais.",
+    "Conheça os projetos de Isaque Rodrigues: GymPass API, CashyBank, Fit.AI, Focuz, Fintech Dashboard e Dogs.",
 }
 
 export default function Page() {
