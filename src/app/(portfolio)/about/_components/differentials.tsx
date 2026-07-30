@@ -1,8 +1,8 @@
 const differentials = [
   {
-    icon: "🤖",
-    title: "Workflow Agêntico",
-    description: "Automação de tarefas e processos com AI",
+    icon: "📱",
+    title: "Web & Mobile",
+    description: "Web com React e Next.js + Mobile com React Native e Expo",
   },
   {
     icon: "🎨",
