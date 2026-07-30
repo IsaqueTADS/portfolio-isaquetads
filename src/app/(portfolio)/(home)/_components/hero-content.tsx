@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Download, Mail } from "lucide-react"
+import { ArrowRight, Download, Mail } from "lucide-react"
 import { Badge } from "../../_components/bagde"
 import { Button } from "@/components/ui/button"
 
@@ -22,10 +22,30 @@ export function HeroContent() {
         </p>
       </div>
 
-      <p className="max-w-lg text-sm leading-relaxed text-muted-foreground">
-        Construo aplicações web escaláveis com TypeScript, React e Node.js.
-        Foco em arquitetura limpa, APIs performáticas e código de qualidade.
-      </p>
+      <div className="max-w-lg space-y-3 text-base leading-relaxed text-muted-foreground sm:text-lg">
+        <p>
+          Estudante de ADS no IFNMG e desenvolvedor Full Stack. Trabalho com
+          TypeScript, React, Node.js e React Native, construindo aplicações web
+          e mobile escaláveis com foco em performance e arquitetura limpa.
+        </p>
+        <p>
+          Experiência com banco de dados relacionais, APIs REST, autenticação,
+          deploy em AWS e integração de IA em aplicações reais.
+        </p>
+
+        <Button
+          nativeButton={false}
+          variant="outline"
+          size="sm"
+          className="rounded-xl text-muted-foreground"
+          render={(props) => (
+            <Link {...props} href="/about">
+              Saiba mais
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          )}
+        />
+      </div>
 
       <div className="flex gap-3">
         <Button
