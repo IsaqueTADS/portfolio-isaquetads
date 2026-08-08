@@ -92,6 +92,7 @@ export const projectsGrouped: ProjectGroup[] = [
           "Aplicação mobile-first para gerenciamento de treinos com IA. Chat com personal trainer virtual, consistency tracker, streak counter e estatísticas de desempenho.",
         technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "better-auth", "AI SDK"],
         githubUrl: "https://github.com/IsaqueTADS/treinos-frontend",
+        demoUrl: "https://apptreinos.isaque.dev.br/",
       },
     ],
   },
