@@ -32,6 +32,12 @@ export const metadata: Metadata = {
       {
         url: "/favicons/favicon-isaque-portfolio-light.png",
         type: "image/png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/favicons/favicon-isaque-portfolio-dark.png",
+        type: "image/png",
+        media: "(prefers-color-scheme: dark)",
       },
     ],
   },
