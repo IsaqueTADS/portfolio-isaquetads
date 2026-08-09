@@ -27,6 +27,28 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     type: "website",
   },
+  icons: {
+    icon: [
+      {
+        url: "/favicons/favicon-isaque-portfolio-light.png",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/favicon-isaque-portfolio-light.webp",
+        type: "image/webp",
+      },
+      {
+        url: "/favicons/favicon-isaque-portfolio-dark.png",
+        type: "image/png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/favicons/favicon-isaque-portfolio-dark.webp",
+        type: "image/webp",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+  },
 }
 
 export default function RootLayout({
