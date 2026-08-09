@@ -31,7 +31,9 @@ export function ExperienceTimeline() {
                 <h3 className="text-lg font-semibold text-foreground">
                   {project.title}
                 </h3>
-                <p className="text-xs font-medium text-primary">Projeto Full Stack</p>
+                <p className="text-xs font-medium text-primary">
+                  {project.role ?? "Projeto Full Stack"}
+                </p>
               </div>
               <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
                 {project.description}

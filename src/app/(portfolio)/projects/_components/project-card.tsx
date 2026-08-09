@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, Lock } from "lucide-react"
 
 export interface Project {
   id: string
@@ -8,12 +8,20 @@ export interface Project {
   githubUrl?: string
   demoUrl?: string
   linkedinUrl?: string
+  badge?: string
+  privateCode?: boolean
 }
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/50">
       <div className="flex flex-col gap-3">
+        {project.badge && (
+          <span className="w-fit rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+            {project.badge}
+          </span>
+        )}
+
         <h3 className="font-heading text-xl font-bold text-foreground">
           {project.title}
         </h3>
@@ -35,7 +43,7 @@ export function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className="mt-auto flex flex-wrap gap-2 pt-4">
-        {project.githubUrl && (
+        {project.githubUrl ? (
           <a
             href={project.githubUrl}
             target="_blank"
@@ -47,7 +55,12 @@ export function ProjectCard({ project }: { project: Project }) {
             </svg>
             Código
           </a>
-        )}
+        ) : project.privateCode ? (
+          <span className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
+            <Lock className="h-4 w-4" />
+            Código privado
+          </span>
+        ) : null}
         {project.demoUrl && (
           <a
             href={project.demoUrl}

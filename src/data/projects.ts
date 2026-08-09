@@ -6,6 +6,9 @@ export interface Project {
   githubUrl?: string
   demoUrl?: string
   linkedinUrl?: string
+  badge?: string
+  privateCode?: boolean
+  role?: string
 }
 
 export interface ProjectGroup {
@@ -15,6 +18,23 @@ export interface ProjectGroup {
 }
 
 export const projectsGrouped: ProjectGroup[] = [
+  {
+    id: "freelance",
+    title: "Freelance / Clientes",
+    projects: [
+      {
+        id: "maria-cristina-neuropsi",
+        title: "Maria Cristina · Psicóloga e Neuropsicóloga",
+        description:
+          "Landing page profissional para cliente (trabalho freelance) com design autoral em paleta terracota e fontes Playfair Display + Inter. Desenvolvi o site, o design da identidade visual da página e otimizei a performance mobile (LCP de 6,4s para ~1s) com export estático.",
+        technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+        demoUrl: "https://mariacristinaneuropsi.com.br/",
+        badge: "Freelance",
+        privateCode: true,
+        role: "Freelance · UI/UX e Desenvolvimento",
+      },
+    ],
+  },
   {
     id: "gympass",
     title: "GymPass - Check-ins em Academias",
@@ -119,6 +139,17 @@ export const projectsStandalone: Project[] = [
 ]
 
 export const projectsExperience: Project[] = [
+  {
+    id: "maria-cristina-neuropsi",
+    title: "Maria Cristina · Psicóloga e Neuropsicóloga",
+    description:
+      "Landing page profissional para cliente (trabalho freelance) com design autoral em paleta terracota, otimizada para performance mobile e publicada via export estático.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    demoUrl: "https://mariacristinaneuropsi.com.br/",
+    badge: "Freelance",
+    privateCode: true,
+    role: "Freelance · UI/UX e Desenvolvimento",
+  },
   {
     id: "gympass-api",
     title: "GymPass API",
