@@ -3,28 +3,29 @@
 import * as React from "react"
 import { useTheme } from "next-themes"
 
-function getFaviconLink() {
-  return (
-    document.querySelector<HTMLLinkElement>(
-      'link[rel="icon"][type="image/png"]'
-    ) ?? document.querySelector<HTMLLinkElement>('link[rel="icon"]')
-  )
+const DARK_ICON = "/favicons/favicon-isaque-portfolio-dark.png"
+const LIGHT_ICON = "/favicons/favicon-isaque-portfolio-light.png"
+
+function applyFavicon(theme: string | undefined) {
+  const dark = theme === "dark"
+  const href = `${dark ? DARK_ICON : LIGHT_ICON}?v=${Date.now()}`
+
+  document
+    .querySelectorAll('link[rel="icon"]')
+    .forEach((link) => link.remove())
+
+  const link = document.createElement("link")
+  link.rel = "icon"
+  link.type = "image/png"
+  link.href = href
+  document.head.appendChild(link)
 }
 
 function FaviconSwitcher() {
   const { resolvedTheme } = useTheme()
 
   React.useEffect(() => {
-    const link = getFaviconLink()
-
-    if (!link) {
-      return
-    }
-
-    const dark = resolvedTheme === "dark"
-    link.href = dark
-      ? "/favicons/favicon-isaque-portfolio-dark.png"
-      : "/favicons/favicon-isaque-portfolio-light.png"
+    applyFavicon(resolvedTheme)
   }, [resolvedTheme])
 
   return null
