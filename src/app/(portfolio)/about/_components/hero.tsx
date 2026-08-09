@@ -8,7 +8,7 @@ export function HeroAbout() {
       <div className="flex items-start justify-center sm:w-[40%]">
         <div className="relative h-200 w-200 overflow-hidden rounded-full">
           <Image
-            src="/isaque-img-transparente.png"
+            src="/isaque-png-profissional-portfolio-transparent.png"
             alt="Isaque Rodrigues"
             fill
             className="object-cover"
